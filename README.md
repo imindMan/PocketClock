@@ -27,3 +27,11 @@ Move to the src folder, then<br>
 ## Other OS
 
 You can actually do the samething. But try to change something in the project suitable to your machine.
+
+# Use this program
+
+Ctrl + H : come to the home page <br>
+Ctrl + F : File run clock (FRC) <br>
+Ctrl + Shift + P : Pomodoro clock <br>
+Ctrl + S : Settings <br>
+Shift + T : To-do list <br>
