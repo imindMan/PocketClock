@@ -11,7 +11,7 @@ icon = PhotoImage(file=".\\data\\icon.png")
 screen.iconphoto(False, icon)
 screen.title("Pocket Clock")
 screen.resizable(False, False)
-screen.geometry("600x500")
+screen.geometry("600x500+400+150")
 
 screen.bind("<Control-h>", show_home)
 screen.mainloop()
