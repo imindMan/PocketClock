@@ -27,6 +27,7 @@ Move to the src folder, then<br>
 ## Other OS
 
 You can actually do the samething. But try to change something in the project suitable to your machine.
+<<<<<<< HEAD
 
 # Use this program
 
@@ -35,3 +36,6 @@ Ctrl + F : File run clock (FRC) <br>
 Ctrl + Shift + P : Pomodoro clock <br>
 Ctrl + S : Settings <br>
 Shift + T : To-do list <br>
+=======
+Maybe some more feature to do 
+>>>>>>> 0178ac955d32c07149ff9788126e58b5f8e3a94f
