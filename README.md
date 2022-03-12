@@ -36,6 +36,4 @@ Ctrl + F : File run clock (FRC) <br>
 Ctrl + Shift + P : Pomodoro clock <br>
 Ctrl + S : Settings <br>
 Shift + T : To-do list <br>
-=======
-Maybe some more feature to do 
->>>>>>> 0178ac955d32c07149ff9788126e58b5f8e3a94f
+
