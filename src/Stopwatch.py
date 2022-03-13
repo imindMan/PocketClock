@@ -22,5 +22,5 @@ class Stopwatch(tk.Frame):
             "Consolas", 18), bg="white", fg="black", border=0, width=10, height=0)
         stopwatch_button.place(x=-1, y=75)
         # main section
-        interface = tk.Frame(self,  bg="green", width=controller.width - 123)
+        interface = tk.Frame(self,  bg="white", width=controller.width - 123)
         interface.pack(side=tk.RIGHT, fill=tk.Y)
