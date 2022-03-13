@@ -21,8 +21,7 @@ Some more features are in this project, that is:
 
 If you have Python in your machine, then open your console<br>
 <code>git clone https://github.com/imindMan/PocketClock.git</code><br>
-Move to the src folder, then<br>
-<code>python main.py</code><br>
+And then run the main.py file in the src folder<br>
 
 ## Other OS
 
