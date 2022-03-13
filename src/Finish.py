@@ -21,5 +21,5 @@ class Finish(tk.Frame):
             "Consolas", 16), bg="black", fg="white", border=0, width=10, height=0, command=lambda: controller.show_frame("Stopwatch"))
         stopwatch_button.place(x=0, y=75)
         # main
-        interface = tk.Frame(self,  bg="green", width=controller.width - 123)
+        interface = tk.Frame(self,  bg="black", width=controller.width - 123)
         interface.pack(side=tk.RIGHT, fill=tk.Y)
