@@ -3,10 +3,41 @@ import tkinter as tk
 
 class Stopwatch(tk.Frame):
 
-    def __init__(self, parent, controller):
+    def __init__(self, parent, controller: tk.Tk):
 
         tk.Frame.__init__(self, parent)
         # the status
+        self.running = False
+        self.totalSec = 0
+
+        def start():
+            if not self.running:
+                countTime()
+                self.running = True
+
+        def stop():
+            if self.running:
+                lbl_time.after_cancel(update)
+                self.running = False
+
+        def reset():
+            if self.running:
+                lbl_time.after_cancel(update)
+                self.running = False
+            self.totalSec = 0
+            lbl_time.config(text="00:00:00")
+
+        def countTime():
+            self.totalSec += 1
+            hour = int(self.totalSec / 3600)
+            minute = int((self.totalSec % 3600) / 60)
+            second = (self.totalSec % 3600) % 60
+            time = "%s:%s:%s" % (str(hour).zfill(2), str(
+                minute).zfill(2), str(second).zfill(2))
+            lbl_time.config(text=time)
+            global update
+            update = lbl_time.after(1000, countTime)
+
         status = tk.Frame(master=self, width=123, height=500, bg="black")
         status.pack(side=tk.LEFT, fill=tk.Y)
 
@@ -24,17 +55,18 @@ class Stopwatch(tk.Frame):
         # main section
         interface = tk.Frame(self,  bg="white", width=controller.width - 123)
         interface.pack(side=tk.RIGHT, fill=tk.Y)
-        entry_time = tk.Label(interface, text="00:00:00",
-                              font=("Consolas", 30), width=8, bg="white")
-        entry_time.place(x=145, y=60)
+        lbl_time = tk.Label(interface, text="00:00:00",
+                            font=("Consolas", 30), width=8, bg="white")
+        lbl_time.place(x=145, y=60)
 
         start_button = tk.Button(
-            interface, text="Start", font=("Consolas", 20))
+            interface, text="Start", font=("Consolas", 20), command=start)
         start_button.place(x=90, y=200)
 
-        stop_button = tk.Button(interface, text="Stop", font=("Consolas", 20))
+        stop_button = tk.Button(interface, text="Stop",
+                                font=("Consolas", 20), command=stop)
         stop_button.place(x=200, y=200)
 
         reset_button = tk.Button(
-            interface, text="Reset", font=("Consolas", 20))
+            interface, text="Reset", font=("Consolas", 20), command=reset)
         reset_button.place(x=300, y=200)
