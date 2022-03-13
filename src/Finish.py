@@ -1,5 +1,4 @@
 import tkinter as tk
-import datetime
 
 
 class Finish(tk.Frame):
