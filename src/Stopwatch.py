@@ -24,3 +24,17 @@ class Stopwatch(tk.Frame):
         # main section
         interface = tk.Frame(self,  bg="white", width=controller.width - 123)
         interface.pack(side=tk.RIGHT, fill=tk.Y)
+        entry_time = tk.Label(interface, text="00:00:00",
+                              font=("Consolas", 30), width=8, bg="white")
+        entry_time.place(x=145, y=60)
+
+        start_button = tk.Button(
+            interface, text="Start", font=("Consolas", 20))
+        start_button.place(x=90, y=200)
+
+        stop_button = tk.Button(interface, text="Stop", font=("Consolas", 20))
+        stop_button.place(x=200, y=200)
+
+        reset_button = tk.Button(
+            interface, text="Reset", font=("Consolas", 20))
+        reset_button.place(x=300, y=200)
