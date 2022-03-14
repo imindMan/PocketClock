@@ -6,9 +6,9 @@ class Stopwatch(tk.Frame):
     def __init__(self, parent, controller: tk.Tk):
 
         tk.Frame.__init__(self, parent)
-        # the status
         self.running = False
         self.totalSec = 0
+        # functions
 
         def start():
             if not self.running:
@@ -37,7 +37,7 @@ class Stopwatch(tk.Frame):
             lbl_time.config(text=time)
             global update
             update = lbl_time.after(1000, countTime)
-
+        # the status
         status = tk.Frame(master=self, width=123, height=500, bg="black")
         status.pack(side=tk.LEFT, fill=tk.Y)
 
