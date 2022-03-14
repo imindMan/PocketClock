@@ -1,15 +1,19 @@
 import tkinter as tk
 from tkinter import messagebox
 
+# Countdown page
+
 
 class Countdown(tk.Frame):
     def __init__(self, parent, controller: tk.Tk):
 
         tk.Frame.__init__(self, parent)
+        # some important variable
         self.running = False
         self.hour, self.minute, self.second = 0, 0, 0
 
         self.time_countdown = tk.StringVar(value="00:00:00")
+        # functions
 
         def start():
             if not self.running:
