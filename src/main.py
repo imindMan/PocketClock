@@ -1,11 +1,14 @@
 import ClockContainer
 from tkinter import *
 
+# function part
+
 
 def show_home(event):
     screen.show_frame("Home")
 
 
+# set up the screen
 screen = ClockContainer.Clock()
 icon = PhotoImage(file=".\\data\\icon.png")
 screen.iconphoto(False, icon)
