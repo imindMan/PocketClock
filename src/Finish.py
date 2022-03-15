@@ -6,6 +6,9 @@ class Finish(tk.Frame):
         tk.Frame.__init__(self, parent)
         # status
 
+        def print_time():
+            print(
+                f"{day_of_week.get()} {day_of_month.get()}-{month.get()}-22 {time_entry.get()}")
         status = tk.Frame(master=self, width=123, height=500, bg="black")
         status.pack(fill=tk.Y, side=tk.LEFT)
 
@@ -64,3 +67,12 @@ class Finish(tk.Frame):
         day_of_month_menu.place(x=126, y=90)
         month_menu = tk.OptionMenu(interface, month, *options_month)
         month_menu.place(x=174, y=90)
+        # 234
+
+        time_entry = tk.Entry(
+            interface, textvariable=tk.StringVar(value="00:00:00 AM"), font=("Consolas", 17), width=12)
+        time_entry.place(x=234, y=90)
+        # 120 200
+        accept_button = tk.Button(
+            interface, text="Count!", font=("Consolas", 20), command=print_time)
+        accept_button.place(x=140, y=200)
