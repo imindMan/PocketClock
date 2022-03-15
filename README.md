@@ -21,6 +21,7 @@ Some more features are in this project, that is:
 
 If you have Python in your machine, then open your console<br>
 <code>git clone https://github.com/imindMan/PocketClock.git</code><br>
+Then, use <code>pip install tk</code> to install tkinter<br>
 And then run the main.py file in the src folder<br>
 
 ## Other OS
