@@ -5,6 +5,7 @@ class Finish(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         # status
+
         status = tk.Frame(master=self, width=123, height=500, bg="black")
         status.pack(fill=tk.Y, side=tk.LEFT)
 
@@ -22,3 +23,44 @@ class Finish(tk.Frame):
         # main
         interface = tk.Frame(self,  bg="white", width=controller.width - 123)
         interface.pack(side=tk.RIGHT, fill=tk.Y)
+
+        info_label = tk.Label(interface, bg="white", fg="black",
+                              text="Select the full end-work time", font=("Consolas", 15))
+        info_label.place(x=40, y=60)
+        options_day_of_week = [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+        ]
+        options_day_of_month = [
+            i for i in range(1, 32)
+        ]
+        options_month = [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+        day_of_week = tk.StringVar(value="Monday")
+        day_of_month = tk.StringVar(value="1")
+        month = tk.StringVar(value="Jan")
+        day_of_week_menu = tk.OptionMenu(
+            interface, day_of_week, *options_day_of_week)
+        day_of_week_menu.place(x=40, y=90)
+        day_of_month_menu = tk.OptionMenu(
+            interface, day_of_month, *options_day_of_month)
+        day_of_month_menu.place(x=126, y=90)
+        month_menu = tk.OptionMenu(interface, month, *options_month)
+        month_menu.place(x=174, y=90)
