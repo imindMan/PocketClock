@@ -8,7 +8,7 @@ class Finish(tk.Frame):
 
         def print_time():
             print(
-                f"{day_of_week.get()} {day_of_month.get()}-{month.get()}-22 {time_entry.get()}")
+                f"{day_of_week.get()} {day_of_month.get()}-{month.get()}-{year.get()} {time_entry.get()}")
         status = tk.Frame(master=self, width=123, height=500, bg="black")
         status.pack(fill=tk.Y, side=tk.LEFT)
 
@@ -31,16 +31,13 @@ class Finish(tk.Frame):
                               text="Select the full end-work time", font=("Consolas", 15))
         info_label.place(x=40, y=60)
         options_day_of_week = [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-        ]
-        options_day_of_month = [
-            i for i in range(1, 32)
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"
         ]
         options_month = [
             "Jan",
@@ -56,17 +53,27 @@ class Finish(tk.Frame):
             "Nov",
             "Dec"
         ]
-        day_of_week = tk.StringVar(value="Monday")
+        options_year = [
+            i for i in range(2022, 2041)
+        ]
+        day_of_week = tk.StringVar(value="Mon")
         day_of_month = tk.StringVar(value="1")
         month = tk.StringVar(value="Jan")
+        year = tk.StringVar(value="2022")
         day_of_week_menu = tk.OptionMenu(
             interface, day_of_week, *options_day_of_week)
+        day_of_week_menu.config(width=2, bg="black", fg="white")
         day_of_week_menu.place(x=40, y=90)
         day_of_month_menu = tk.OptionMenu(
-            interface, day_of_month, *options_day_of_month)
-        day_of_month_menu.place(x=126, y=90)
+            interface, day_of_month, *[i for i in range(1, 32)])
+        day_of_month_menu.config(width=1, bg="black", fg="white")
+        day_of_month_menu.place(x=90, y=90)
         month_menu = tk.OptionMenu(interface, month, *options_month)
-        month_menu.place(x=174, y=90)
+        month_menu.config(width=2, bg="black", fg="white")
+        month_menu.place(x=133, y=90)
+        year_menu = tk.OptionMenu(interface, year, *options_year)
+        year_menu.config(width=2, bg="black", fg="white")
+        year_menu.place(x=173, y=90)
         # 234
 
         time_entry = tk.Entry(
