@@ -71,24 +71,22 @@ class Finish(tk.Frame):
         year = tk.StringVar(value="2022")
         day_of_week_menu = tk.OptionMenu(
             interface, day_of_week, *options_day_of_week)
-        day_of_week_menu.config(width=2, bg="black", fg="white")
+        day_of_week_menu.config(width=2)
         day_of_week_menu.place(x=40, y=90)
         day_of_month_menu = tk.OptionMenu(
             interface, day_of_month, *[i for i in range(1, 32)])
-        day_of_month_menu.config(width=1, bg="black", fg="white")
+        day_of_month_menu.config(width=1)
         day_of_month_menu.place(x=90, y=90)
         month_menu = tk.OptionMenu(interface, month, *options_month)
-        month_menu.config(width=2, bg="black", fg="white")
+        month_menu.config(width=2)
         month_menu.place(x=133, y=90)
         year_menu = tk.OptionMenu(interface, year, *options_year)
-        year_menu.config(width=2, bg="black", fg="white")
+        year_menu.config(width=2)
         year_menu.place(x=173, y=90)
-        # 234
 
         time_entry = tk.Entry(
             interface, textvariable=tk.StringVar(value="00:00:00 AM"), font=("Consolas", 17), width=12)
         time_entry.place(x=234, y=90)
-        # 120 200
         accept_button = tk.Button(
             interface, text="Count!", font=("Consolas", 20), command=print_time)
         accept_button.place(x=140, y=200)
