@@ -1,14 +1,23 @@
+import time
 import tkinter as tk
+from tkinter import messagebox
 
 
 class Finish(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         # status
+        self.update_time = None
 
         def print_time():
-            print(
-                f"{day_of_week.get()} {day_of_month.get()}-{month.get()}-{year.get()} {time_entry.get()}")
+            time_access = f"{day_of_week.get()} {day_of_month.get()}-{month.get()}-{year.get()} {time_entry.get()}"
+            time_now = time.strftime("%a %d-%b-%G %I:%M:%S %p")
+            if time_access != time_now:
+                self.update_time = controller.after(1, print_time)
+            else:
+                controller.after_cancel(self.update_time)
+                messagebox.showwarning("System", "Work's end!")
+
         status = tk.Frame(master=self, width=123, height=500, bg="black")
         status.pack(fill=tk.Y, side=tk.LEFT)
 
