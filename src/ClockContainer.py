@@ -3,6 +3,7 @@ import Countdown
 import Stopwatch
 import Finish
 import Home
+import Pomodoro
 
 # The container to hold all of the page in application
 
@@ -19,7 +20,7 @@ class Clock(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
         self.frames = {}
         # loop to make a dictionary of pages
-        for f in (Home.Home, Countdown.Countdown, Stopwatch.Stopwatch, Finish.Finish):
+        for f in (Home.Home, Countdown.Countdown, Stopwatch.Stopwatch, Finish.Finish, Pomodoro.Pomodoro):
             name = str(f.__name__)
             frame = f(container, self)
 
