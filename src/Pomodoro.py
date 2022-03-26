@@ -37,3 +37,5 @@ class Pomodoro(tk.Frame):
         stop_button = tk.Button(
             interface, text="Stop", font=("Consolas", 20))
         stop_button.place(x=270, y=200)
+
+    
