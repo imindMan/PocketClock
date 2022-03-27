@@ -1,14 +1,34 @@
 import tkinter as tk
+
 class Pomodoro(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         status = tk.Frame(master=self, width=123, height=500, bg="black")
         status.pack(fill=tk.Y, side=tk.LEFT)
         
+        self.time_break = False
+        self.running = False
+        self.totalSec = 0
+
         def start():
-            pass
+            if not self.running:
+                count_pomodoro()
+                self.running = True
+            elif not self.time_break:
+                count_pomodoro()
+                self.time_break = True
+
         def stop():
-            pass
+            if self.running:
+                self.running = False
+                global update_time
+                time_label.after_cancel(update_time)
+
+        def count_pomodoro(): 
+            
+            global update_time
+            update_time = time_label.after(1000, count_pomodoro)
+
         countdown_button = tk.Button(
             master=status, text="Countdown", font=("Consolas", 16), bg="black", fg="white", command=lambda: controller.show_frame("Countdown"), border=0)
         countdown_button.place(x=0, y=0)
@@ -31,11 +51,9 @@ class Pomodoro(tk.Frame):
         time_label.place(x=145, y=60)
         
         start_button = tk.Button(
-            interface, text="Start", font=("Consolas", 20))
+                interface, text="Start", font=("Consolas", 20), command=start)
         start_button.place(x=100, y=200)
 
         stop_button = tk.Button(
-            interface, text="Stop", font=("Consolas", 20))
-        stop_button.place(x=270, y=200)
-
-    
+            interface, text="Stop", font=("Consolas", 20), command=stop)
+        stop_button.place(x=270, y=200) 
