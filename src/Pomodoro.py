@@ -11,23 +11,13 @@ class Pomodoro(tk.Frame):
         self.totalSec = 0
 
         def start():
-            if not self.running:
-                count_pomodoro()
-                self.running = True
-            elif not self.time_break:
-                count_pomodoro()
-                self.time_break = True
+            pass
 
         def stop():
-            if self.running:
-                self.running = False
-                global update_time
-                time_label.after_cancel(update_time)
-
+            pass
         def count_pomodoro(): 
+            pass
             
-            global update_time
-            update_time = time_label.after(1000, count_pomodoro)
 
         countdown_button = tk.Button(
             master=status, text="Countdown", font=("Consolas", 16), bg="black", fg="white", command=lambda: controller.show_frame("Countdown"), border=0)
