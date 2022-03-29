@@ -7,17 +7,62 @@ class Pomodoro(tk.Frame):
         status.pack(fill=tk.Y, side=tk.LEFT)
         
         self.time_break = False
-        self.running = False
+        self.main = False
+        self.stop = False
         self.totalSec = 0
 
         def start():
-            pass
-
+            if self.main == False and self.time_break == False and self.stop == False:
+                self.main = True
+            elif self.main == False and self.time_break == True and self.stop == True:
+                self.time_break = False
+                self.main = True
+                self.stop = False
+            elif self.main == True and self.time_break == False and self.stop == True:
+                self.main = False
+                self.time_break = True
+                self.stop = False
+            print("Main: ",self.main, "Time break: ",self.time_break, "Stop: ",self.stop)
+            count_pomodoro()
         def stop():
-            pass
+            if self.main == True and self.time_break == False and self.stop == False:
+                self.stop = True
+                self.time_break = True
+                self.main = False
+            elif self.main == False and self.time_break == True and self.stop == False:
+                self.stop = True
+                self.time_break = False
+                self.main = True
+            time_label.after_cancel(update)
+
+            print("Main: ",self.main, "Time break: ",self.time_break, "Stop: ",self.stop)
         def count_pomodoro(): 
-            pass
-            
+            if self.totalSec < 20 and self.main == True and self.time_break == False and self.stop == False:
+                self.totalSec += 1
+                print(self.totalSec)
+                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                time_label.config(text=time)
+            elif self.totalSec == 20 and self.main == True and self.time_break == False and self.stop == False:
+                self.totalSec = 0
+                self.main = False
+                self.time_break = True
+                print(self.totalSec)
+                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                time_label.config(text=time)
+            elif self.totalSec < 10 and self.main == False and self.time_break == True and self.stop == False:
+                self.totalSec += 1
+                print(self.totalSec)
+                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                time_label.config(text=time)
+            elif self.totalSec == 10 and self.main == False and self.time_break == True and self.stop == False:
+                self.main = True
+                self.time_break = False
+                self.totalSec = 0
+                print(self.totalSec)
+                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                time_label.config(text=time)
+            global update
+            update = time_label.after(1000, count_pomodoro)
 
         countdown_button = tk.Button(
             master=status, text="Countdown", font=("Consolas", 16), bg="black", fg="white", command=lambda: controller.show_frame("Countdown"), border=0)
