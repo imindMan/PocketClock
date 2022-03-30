@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from tkinter import messagebox
 class Pomodoro(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -50,6 +50,7 @@ class Pomodoro(tk.Frame):
                 time_label.config(text=time)
                 status_lbl.config(text="Work")
             elif self.totalSec == 20 and self.main == True and self.time_break == False and self.stop == False:
+                messagebox.showwarning("System", "Break time!")
                 self.totalSec = 0
                 self.main = False
                 self.time_break = True
@@ -64,6 +65,7 @@ class Pomodoro(tk.Frame):
                 time_label.config(text=time)
                 status_lbl.config(text="Break")
             elif self.totalSec == 10 and self.main == False and self.time_break == True and self.stop == False and self.pomodoro_circulation_count != 1:
+                messagebox.showwarning("System", "Work time!")
                 self.main = True
                 self.time_break = False
                 self.pomodoro_circulation_count += 1
@@ -74,6 +76,7 @@ class Pomodoro(tk.Frame):
                 time_label.config(text=time)
                 status_lbl.config(text="Work")
             elif self.totalSec == 10 and self.main == False and self.time_break == True and self.stop == False and self.pomodoro_circulation_count == 1:
+                messagebox.showwarning("System", "Long break!")
                 self.time_break = False
                 self.totalSec = 0
                 self.long_break = True
@@ -88,6 +91,7 @@ class Pomodoro(tk.Frame):
                 time_label.config(text=time)
                 status_lbl.config(text="L/break")
             elif self.totalSec == 10 and self.main == False and self.time_break == False and self.stop == False and self.long_break == True and self.pomodoro_circulation_count == 1:
+                messagebox.showwarning("System", "Work time!")
                 self.totalSec = 0
                 self.main = True
                 self.long_break = False
