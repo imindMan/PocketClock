@@ -17,7 +17,7 @@ Some more features are in this project, that is:
 
 # Installation
 
-## Windows
+
 
 Install <a href="https://www.python.org/downloads/">python</a> >= 3.0<br>
 Clone the respository to your machine <br/>
@@ -25,9 +25,7 @@ Clone the respository to your machine <br/>
 Then, use <code>pip install tk</code> to install tkinter<br>
 And then run the main.py file in the src folder<br>
 
-## Other OS
-
-You can actually do the samething. But try to change something in the project suitable to your machine.
+If you are using Windows, feel free to continue. If not, then go to the main.py file and change something follow my comments
 
 # Use this program
 
