@@ -43,28 +43,37 @@ class Pomodoro(tk.Frame):
 
             print("Main: ",self.main, "Time break: ",self.time_break, "Stop: ",self.stop)
         def count_pomodoro(): 
-            if self.totalSec < 20 and self.main == True and self.time_break == False and self.stop == False:
+            if self.totalSec < 1500 and self.main == True and self.time_break == False and self.stop == False:
                 self.totalSec += 1
                 print(self.totalSec)
-                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                hour = int(self.totalSec / 3600)
+                minute = int((self.totalSec % 3600) / 60)
+                second = (self.totalSec % 3600) % 60
+                time = "%s:%s:%s" %(str(hour).zfill(2),str(minute).zfill(2),str(second).zfill(2))
                 time_label.config(text=time)
                 status_lbl.config(text="Work")
-            elif self.totalSec == 20 and self.main == True and self.time_break == False and self.stop == False:
+            elif self.totalSec == 1500 and self.main == True and self.time_break == False and self.stop == False:
                 messagebox.showwarning("System", "Break time!")
                 self.totalSec = 0
                 self.main = False
                 self.time_break = True
                 print(self.totalSec)
-                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                hour = int(self.totalSec / 3600)
+                minute = int((self.totalSec % 3600) / 60)
+                second = (self.totalSec % 3600) % 60
+                time = "%s:%s:%s" %(str(hour).zfill(2),str(minute).zfill(2),str(second).zfill(2))
                 time_label.config(text=time)
                 status_lbl.config(text="Break")
-            elif self.totalSec < 10 and self.main == False and self.time_break == True and self.stop == False:
+            elif self.totalSec < 300 and self.main == False and self.time_break == True and self.stop == False:
                 self.totalSec += 1
                 print(self.totalSec)
-                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                hour = int(self.totalSec / 3600)
+                minute = int((self.totalSec % 3600) / 60)
+                second = (self.totalSec % 3600) % 60
+                time = "%s:%s:%s" %(str(hour).zfill(2),str(minute).zfill(2),str(second).zfill(2))
                 time_label.config(text=time)
                 status_lbl.config(text="Break")
-            elif self.totalSec == 10 and self.main == False and self.time_break == True and self.stop == False and self.pomodoro_circulation_count != 1:
+            elif self.totalSec == 300 and self.main == False and self.time_break == True and self.stop == False and self.pomodoro_circulation_count != 4:
                 messagebox.showwarning("System", "Work time!")
                 self.main = True
                 self.time_break = False
@@ -72,32 +81,46 @@ class Pomodoro(tk.Frame):
                 print("Pomodoro count:", self.pomodoro_circulation_count)
                 self.totalSec = 0
                 print(self.totalSec)
-                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                hour = int(self.totalSec / 3600)
+                minute = int((self.totalSec % 3600) / 60)
+                second = (self.totalSec % 3600) % 60
+                time = "%s:%s:%s" %(str(hour).zfill(2),str(minute).zfill(2),str(second).zfill(2))
                 time_label.config(text=time)
                 status_lbl.config(text="Work")
-            elif self.totalSec == 10 and self.main == False and self.time_break == True and self.stop == False and self.pomodoro_circulation_count == 1:
+            elif self.totalSec == 300 and self.main == False and self.time_break == True and self.stop == False and self.pomodoro_circulation_count == 4:
                 messagebox.showwarning("System", "Long break!")
                 self.time_break = False
                 self.totalSec = 0
                 self.long_break = True
-                print("Time to long break!")
-                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                hour = int(self.totalSec / 3600)
+                minute = int((self.totalSec % 3600) / 60)
+                second = (self.totalSec % 3600) % 60
+                time = "%s:%s:%s" %(str(hour).zfill(2),str(minute).zfill(2),str(second).zfill(2))
                 time_label.config(text=time)
+                print("Time to long break!")
                 status_lbl.config(text="L/break")
-            elif self.totalSec < 10 and self.main == False and self.time_break == False and self.stop == False and self.long_break == True and self.pomodoro_circulation_count == 1:
+            elif self.totalSec < 1800 and self.main == False and self.time_break == False and self.stop == False and self.long_break == True and self.pomodoro_circulation_count == 4:
                 self.totalSec += 1
                 print(self.totalSec)
                 time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                hour = int(self.totalSec / 3600)
+                minute = int((self.totalSec % 3600) / 60)
+                second = (self.totalSec % 3600) % 60
+                time = "%s:%s:%s" %(str(hour).zfill(2),str(minute).zfill(2),str(second).zfill(2))
+                time_label.config(text=time)
                 time_label.config(text=time)
                 status_lbl.config(text="L/break")
-            elif self.totalSec == 10 and self.main == False and self.time_break == False and self.stop == False and self.long_break == True and self.pomodoro_circulation_count == 1:
+            elif self.totalSec == 1800 and self.main == False and self.time_break == False and self.stop == False and self.long_break == True and self.pomodoro_circulation_count == 4:
                 messagebox.showwarning("System", "Work time!")
                 self.totalSec = 0
                 self.main = True
                 self.long_break = False
                 self.pomodoro_circulation_count = 0
                 print(self.totalSec)
-                time = "00:00:%s" %(str(self.totalSec).zfill(2))
+                hour = int(self.totalSec / 3600)
+                minute = int((self.totalSec % 3600) / 60)
+                second = (self.totalSec % 3600) % 60
+                time = "%s:%s:%s" %(str(hour).zfill(2),str(minute).zfill(2),str(second).zfill(2))
                 time_label.config(text=time)
                 status_lbl.config(text="Work")
             global update
