@@ -25,7 +25,7 @@ Clone the respository to your machine <br/>
 Then, use <code>pip install tk</code> to install tkinter<br>
 And then run the main.py file in the src folder<br>
 
-If you are using Windows, feel free to continue. If not, then go to the main.py file and change something follow my comments
+Change something in the main.py in the src folder follow my comments. 
 
 # Use this program
 
