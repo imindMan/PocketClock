@@ -1,6 +1,6 @@
 # PocketClock
 
-🕖🕖A pocket clock - make your life more convenient 🕖🕖<br>
+🕖🕖The pocket clock - make your life more convenient 🕖🕖<br>
 
 Pretty simple GUI Clock project using tkinter. The idea behind this project is inspired by the "Alarm & Clock" in Windows 10 💻. <br>
 Some more features are in this project, that is:
