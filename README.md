@@ -15,11 +15,12 @@ Some more features are in this project, that is:
 </ul><br>
 <p>P/S: Written by a lazy guy</p>
 
-# Setup the program
+# Installation
 
 ## Windows
 
-If you have Python in your machine, then open your console<br>
+Install <a href="https://www.python.org/downloads/">python</a> >= 3.0<br>
+Clone the respository to your machine <br/>
 <code>git clone https://github.com/imindMan/PocketClock.git</code><br>
 Then, use <code>pip install tk</code> to install tkinter<br>
 And then run the main.py file in the src folder<br>
