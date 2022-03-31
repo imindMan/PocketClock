@@ -32,6 +32,6 @@ You can actually do the samething. But try to change something in the project su
 # Use this program
 
 Ctrl + H : come to the home page <br>
-Ctrl + F : File run clock (FRC) <br>
+<!-- Ctrl + F : File run clock (FRC) <br> -->
 Ctrl + Shift + P : Pomodoro clock <br>
 Shift + T : To-do list <br>
