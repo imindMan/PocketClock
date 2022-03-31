@@ -15,14 +15,14 @@ def show_pomodoro(event):
 # set up the screen
 screen = ClockContainer.Clock()
 icon = PhotoImage(
-    file="..\\data\\icon.png")
+    file="H:\\K.DONG\\My book\Learn to code\\Pocket Clock\\data\icon.png")  # change this path to your path to the icon.png
 screen.iconphoto(False, icon)
 screen.title("Pocket Clock")
 screen.resizable(False, False)
 screen.geometry("600x500+400+150")
 
-# change the <Control-h> to the hot key you want, this hot key will return to the home page
+# change the <Control-h> to the hot key you want, this hot key will return to the home page (if you aren't using Windows)
 screen.bind("<Control-h>", show_home)
-# change the <Control-p> to the hot key you want, this hot key will return to the pomodoro page
+# change the <Control-p> to the hot key you want, this hot key will return to the pomodoro page (if you aren't using Windows)
 screen.bind("<Control-P>", show_pomodoro)
 screen.mainloop()
