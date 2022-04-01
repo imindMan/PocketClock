@@ -39,7 +39,16 @@ class Pomodoro(tk.Frame):
                 self.main = True
             status_lbl.config(text="Silent")
             time_label.after_cancel(update)
-
+        def reset():
+            time_label.config(text="00:00:00")
+            self.time_break = False
+            self.main = False
+            self.stop = False
+            self.long_break = False
+            self.pomodoro_circulation_count = 0
+            self.totalSec = 0
+            status_lbl.config(text="Silent")
+        
         def count_pomodoro(): 
             if self.totalSec < 1500 and self.main == True and self.time_break == False and self.stop == False:
                 self.totalSec += 1
@@ -142,8 +151,11 @@ class Pomodoro(tk.Frame):
         
         start_button = tk.Button(
                 interface, text="Start", font=("Consolas", 20), command=start)
-        start_button.place(x=100, y=240)
+        start_button.place(x=90, y=240)
 
         stop_button = tk.Button(
             interface, text="Stop", font=("Consolas", 20), command=stop)
-        stop_button.place(x=270, y=240) 
+        stop_button.place(x=200, y=240)
+
+        reset_button = tk.Button(interface, text="Reset", font=("Consolas", 20), command=reset)
+        reset_button.place(x = 300, y = 240)
