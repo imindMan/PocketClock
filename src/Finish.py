@@ -10,7 +10,7 @@ class Finish(tk.Frame):
         self.update_time = None
 
         def print_time():
-            time_access = f"{day_of_week.get()} {day_of_month.get()}-{month.get()}-{year.get()} {time_entry.get()}"
+            time_access = f"{day_of_week.get()} {day_of_month.get().zfill(2)}-{month.get()}-{year.get()} {time_entry.get()}"
             time_now = time.strftime("%a %d-%b-%G %I:%M:%S %p")
             if time_access != time_now:
                 self.update_time = controller.after(1, print_time)
