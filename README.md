@@ -30,4 +30,4 @@ If you want to run the project, run the main.py file in the src folder.
 
 Ctrl + H : come to the home page <br><!-- Ctrl + F : File run clock (FRC) <br> -->
 Ctrl + Shift + P : Pomodoro clock <br>
-Shift + T : To-do list <br>
+Shift + Tab : To-do list <br>
