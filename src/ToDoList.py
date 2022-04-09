@@ -19,3 +19,4 @@ class ToDoList(tk.Frame):
         stopwatch_button.place(x=-1, y=75)
         todo_label = tk.Button(master=status, text="ToDoList", font=("Consolas", 16), bg="white", fg="black", border=0, width=10, height=0)
         todo_label.place(x=0, y=109)
+
