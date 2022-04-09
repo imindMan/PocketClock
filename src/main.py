@@ -17,7 +17,7 @@ def show_to_do_list(event):
 # set up the screen
 screen = ClockContainer.Clock()
 icon = PhotoImage(
-    file="H:\\K.DONG\\My book\Learn to code\\Pocket Clock\\data\icon.png")  # change this path to your path to the icon.png
+    file="H:\\K.DONG\\My book\\Learn to code\\Pocket Clock\\data\\icon.png")  # change this path to your path to the icon.png
 screen.iconphoto(False, icon)
 screen.title("Pocket Clock")
 screen.resizable(False, False)
