@@ -19,4 +19,11 @@ class ToDoList(tk.Frame):
         stopwatch_button.place(x=-1, y=75)
         todo_label = tk.Button(master=status, text="ToDoList", font=("Consolas", 16), bg="white", fg="black", border=0, width=10, height=0)
         todo_label.place(x=0, y=109)
+        
+        # limit: 9
+        # x = 400, y = 460
 
+        interface = tk.Label(self, width=477, height=500, bg="white")
+        interface.place(x=123, y=0)
+        add_todo_btn = tk.Button(master=interface, text="+", font=("Consolas", 16), bg="white", fg="black", border=0, width=10, height=0)
+        add_todo_btn.place(x=400, y=460)
