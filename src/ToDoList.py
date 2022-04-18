@@ -21,7 +21,6 @@ class ToDoList(tk.Frame):
         todo_label.place(x=0, y=109)
         
         # limit: 9
-        # x = 400, y = 460
 
         interface = tk.Label(self, width=477, height=500, bg="white")
         interface.place(x=123, y=0)
