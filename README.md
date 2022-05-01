@@ -28,6 +28,6 @@ If you want to run the project, run the main.py file in the src folder.
 
 # Use this program
 
-Ctrl + H : come to the home page <br>
-Ctrl + Shift + P : Pomodoro clock <br>
+Ctrl + H (or your specific shortcut): come to the home page <br>
+Ctrl + Shift + P (or your specific shortcut): Pomodoro clock <br>
 Shift + Tab : To-do list <br>
