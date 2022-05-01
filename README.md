@@ -1,4 +1,4 @@
-# PocketClock
+# Pocket Clock
 
 🕖🕖The pocket clock - make your life more convenient 🕖🕖<br>
 
