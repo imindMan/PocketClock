@@ -31,3 +31,14 @@ If you want to run the project, run the main.py file in the src folder.
 Ctrl + H (or your specific shortcut): come to the home page <br>
 Ctrl + Shift + P (or your specific shortcut): Pomodoro clock <br>
 Shift + Tab : To-do list <br>
+
+# Contribute me
+
+Ask me if you want to contribute. Contact me in:<br>
+<ul>
+  <li> Discord: imindMan#8536 </li>
+  <li> Gmail: khanhdonglethanhtong7b2@gmail.com </li>
+</ul>
+
+If I accept, you can fork this repository and change something. <br>
+Actually I need to redesign the application. <strong>SO PLEASE CONTRIBUTE ME IF YOU CAN</strong>
