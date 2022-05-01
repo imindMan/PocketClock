@@ -10,7 +10,7 @@ Some more features are in this project, that is:
   <p>File run clock counts the time that a <b>Python single file</b> ran, but make sure that your file has a <b>main function</b> in it.</p> -->
   <li>Pomodoro clock (run by using <code>Ctrl + Shift + P</code>)</li>
   <p>This clock will help you in study and work, by using the pomodoro clock.</p>
-  <li>To-do list (run by using <code>Shift + T</code>)</li>
+  <li>To-do list (run by using <code>Shift + Tab</code>)</li>
   <p>You can start make some plans in this section</p>
 </ul><br>
 <p>P/S: Written by a lazy guy</p>
