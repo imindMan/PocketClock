@@ -27,5 +27,5 @@ screen.geometry("600x500+400+150")
 screen.bind("<Control-h>", show_home)
 # change the <Control-p> to the keyboard shortcut you want, this keyboard shortcut will return to the pomodoro page (if you aren't using Windows)
 screen.bind("<Control-P>", show_pomodoro)
-screen.bind("<Shift-Tab>", show_to_do_list)
+screen.bind("<Shift-Tab>", show_to_do_list) # if you like, you can change it
 screen.mainloop()
