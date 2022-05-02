@@ -39,5 +39,5 @@ Ask me if you want to contribute. Contact me in:<br>
   <li> Gmail: khanhdonglethanhtong7b2@gmail.com </li>
 </ul>
 
-If I accept, you can fork this repository and change something. <br>
+If I accept, you can change something. <br>
 Actually I need to redesign the application. <strong>SO PLEASE CONTRIBUTE ME IF YOU CAN</strong>
