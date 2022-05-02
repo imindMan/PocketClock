@@ -29,7 +29,7 @@ If you want to run the project, run the main.py file in the src folder.
 
 Ctrl + H (or your specific shortcut): come to the home page <br>
 Ctrl + Shift + P (or your specific shortcut): Pomodoro clock <br>
-Shift + Tab : To-do list <br>
+Shift + Tab (or your specific shortcut): To-do list <br>
 
 # Contribute me
 
