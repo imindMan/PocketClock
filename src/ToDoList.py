@@ -2,8 +2,11 @@ import tkinter as tk
 class ToDoList(tk.Frame):
     def __init__(self, parent, controller):
         self.listOfTodo = []
-        def addToDo(self, content):
-            pass
+        self.content = ""
+        def launchFirst():
+            window_launch = tk.Tk()
+            window_launch.geometry("600x500+400+150")
+
 
         tk.Frame.__init__(self, parent)
         # status
@@ -28,7 +31,6 @@ class ToDoList(tk.Frame):
 
         interface = tk.Label(self, width=477, height=500, bg="white")
         interface.place(x=123, y=0)
-        add_todo_btn = tk.Button(master=interface, text="+", font=("Consolas", 16), bg="white", fg="black", border=0, width=10, height=0)
+        add_todo_btn = tk.Button(master=interface, text="+", font=("Consolas", 16), bg="white", fg="black", border=0, width=10, height=0, command=launchFirst)
         add_todo_btn.place(x=400, y=460)
-
-
+        
