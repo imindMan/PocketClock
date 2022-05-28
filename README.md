@@ -33,11 +33,11 @@ Shift + Tab (or your specific shortcut): To-do list <br>
 
 # Contribute me
 
-Ask me if you want to contribute. Contact me in:<br>
 <ul>
-  <li> Discord: imindMan#8536 </li>
-  <li> Gmail: khanhdonglethanhtong7b2@gmail.com </li>
+  1. Create a pull request <br/>
+  2. Bruh change =))))))))))))))) <br/>
+  3. DM me <br/>
+  4. Wait until I accept or not br <br/>
 </ul>
-
-If I accept, you can change something. <br>
-Actually I need to redesign the application. <strong>SO PLEASE CONTRIBUTE ME IF YOU CAN</strong>
+ 
+ Actually, I have some troubles with the design, so pls help me 🙏🙏🙏🙏🙏🙏🙏🙏
