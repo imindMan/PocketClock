@@ -9,11 +9,11 @@ class Finish(tk.Frame):
         # status
         self.update_time = None
 
-        def print_time():
+        def count_time():
             time_access = f"{day_of_week.get()} {day_of_month.get().zfill(2)}-{month.get()}-{year.get()} {time_entry.get()}"
             time_now = time.strftime("%a %d-%b-%G %I:%M:%S %p")
             if time_access != time_now:
-                self.update_time = controller.after(1, print_time)
+                self.update_time = controller.after(1, count_time)
             else:
                 controller.after_cancel(self.update_time)
                 messagebox.showwarning("System", "Work's end!")
@@ -88,5 +88,5 @@ class Finish(tk.Frame):
             interface, textvariable=tk.StringVar(value="00:00:00 AM"), font=("Consolas", 17), width=12)
         time_entry.place(x=234, y=90)
         accept_button = tk.Button(
-            interface, text="Count!", font=("Consolas", 20), command=print_time)
+            interface, text="Count!", font=("Consolas", 20), command=count_time)
         accept_button.place(x=140, y=200)
