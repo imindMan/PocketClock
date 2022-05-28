@@ -16,8 +16,6 @@ Some more features are in this project, that is:
 
 # Installation
 
-
-
 Install <a href="https://www.python.org/downloads/">python</a> >= 3.0<br>
 Clone the respository to your machine <br/>
 <code>git clone https://github.com/imindMan/PocketClock.git</code><br>
@@ -40,4 +38,4 @@ Shift + Tab (or your specific shortcut): To-do list <br>
   4. Wait until I accept or not br <br/>
 </ul>
  
- Actually, I have some troubles with the design, so pls help me 🙏🙏🙏🙏🙏🙏🙏🙏
+Actually, I have some troubles with the design, so pls help me 🙏🙏🙏🙏🙏🙏🙏🙏
