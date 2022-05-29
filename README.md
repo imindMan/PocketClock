@@ -3,7 +3,7 @@
 🕖🕖The pocket clock - make your life more convenient 🕖🕖<br>
 
 <img src=".\data\screen.png" alt="Screen sample" />
-
+*Sorry for bad design, that's just a simple project. I don't want to make it seriously. Actually I feel like a caveman after finished this*
 Pretty simple GUI Clock project using tkinter. The idea behind this project is inspired by the "Alarm & Clock" in Windows 10 💻. <br>
 Some features are in this project, that is:
 
