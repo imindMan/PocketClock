@@ -29,4 +29,4 @@ Move to the PocketClock folder, then run<br>
 The requirements are the same, except the OS <br>
 So, clone it, and before you run it, change somethng in the project.
 So, the things to change are in the `PocketClock/src/main.py`
-<img src=".\data\tutorial1.png" alt="Screen sample" />
+<img src=".\tutorial1.png" alt="Screen sample" />
