@@ -17,7 +17,7 @@ class WorldTime(tk.Frame):
             date = datetime.now(time)
             utc = date.astimezone(UTC)
             text_display = region_entry.get() + \
-                " is " + utc.strftime("%Y-%m-%d %H:%M:%S")
+                " is " + utc.strftime("%d-%b-%G %I:%M:%S %p")
             display_lbl = tk.Label(
                 interface, bg="white", fg="black", text=text_display, font=("Consolas", 16))
             display_lbl.place(x=19, y=100)
