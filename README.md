@@ -16,13 +16,15 @@ Some more features are in this project, that is:
 
 # Installation
 
-Install <a href="https://www.python.org/downloads/">python</a> >= 3.0<br>
-Clone the respository to your machine <br/>
-<code>$ git clone https://github.com/imindMan/PocketClock.git</code><br>
-Then, use <code>$ pip install tk</code> to install tkinter<br>
-Change something in the main.py in the src folder follow my comments. <br/>
-If you want to run the project, run the main.py file in the src folder.
+<ul>
 
+  <li>Install <a href="https://www.python.org/downloads/">python</a> >= 3.0</li>
+  <li>Clone the respository to your machine</li>
+  <code>$ git clone https://github.com/imindMan/PocketClock.git</code><br>
+  Then, use <code>$ pip install tk</code> to install tkinter<br>
+  Change something in the main.py in the src folder follow my comments. <br/>
+  If you want to run the project, run the main.py file in the src folder.
+</ul>
 # Use this program
 
 Ctrl + H (or your specific shortcut): come to the home page <br>
