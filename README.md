@@ -2,6 +2,8 @@
 
 🕖🕖The pocket clock - make your life more convenient 🕖🕖<br>
 
+<img src=".\data\screen.png" alt="Screen sample" />
+
 Pretty simple GUI Clock project using tkinter. The idea behind this project is inspired by the "Alarm & Clock" in Windows 10 💻. <br>
 Some more features are in this project, that is:
 
@@ -27,17 +29,4 @@ Some more features are in this project, that is:
 </ul>
 # Use this program
 
-Ctrl + H (or your specific shortcut): come to the home page <br>
-Ctrl + Shift + P (or your specific shortcut): Pomodoro clock <br>
-Shift + Tab (or your specific shortcut): To-do list <br>
-
-# Contribute me
-
-<ul>
-  1. Create a pull request <br/>
-  2. Bruh change =))))))))))))))) <br/>
-  3. DM me <br/>
-  4. Wait until I accept or not br <br/>
-</ul>
- 
-Actually, I have some troubles with the design, so pls help me 🙏🙏🙏🙏🙏🙏🙏🙏
+For tutorial click this: https://github.com/imindMan/PocketClock/blob/master/data/howtouse.md
