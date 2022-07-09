@@ -692,12 +692,4 @@ These are list of the regions that World-time clock can support:
 </ul>
 Choose a region you want, and then click the "Submit!" button to know the time of that region
 
-## Bonus: new features in the new version
-
-<ul>
-    <li>Fix some bugs, add some new features 💻💻</li>
-    <li>New: note-time page 📒📒⌚⌚</li>
-    <li>Redesign the program</li>
-</ul>
-
 Current version: `v.1.0.0`
