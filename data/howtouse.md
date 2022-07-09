@@ -690,6 +690,7 @@ These are list of the regions that World-time clock can support:
 <li>WET</li>
 <li>Zulu</li>
 </ul>
-Choose a region you want, and then click the "Submit!" button to know the time of that region
+Choose a region you want, and then click the "Submit!" button to know the time of that region<br>
 
+# Current version
 Current version: `v.1.0.0`
